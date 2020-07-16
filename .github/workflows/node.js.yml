@@ -6,10 +6,10 @@ name: Node CI
 on: [push]
 
 jobs:
-       - name: webpack artifacts
-         uses: actions/upload-artifact@v2
-         with:
-            path: public/
+       - uses: actions/upload-artifact@v2
+    needs: build
+       name: webpack artifacts
+       path: public/
             
     runs-on: ubuntu-latest
 
